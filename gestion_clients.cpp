@@ -65,7 +65,7 @@ void gestion_clients::on_pushButton_ajouter_clicked()
       affichertable_abonne();
       ui->comboBox_4->setModel(aa.afficher());
 
-      QMessageBox::information(nullptr,QObject::tr("Ajuter un abonné"),
+      QMessageBox::information(nullptr,QObject::tr("Ajouter un abonné"),
                                QObject::tr("abonné Ajouté !!\n""Click Cancel to exit."),QMessageBox::Cancel);
 
   }
@@ -214,12 +214,12 @@ void gestion_clients::on_comboBox_currentIndexChanged()
 
 
 
-
+//commit git
 
 
 void gestion_clients::on_pushButton_supprimer_ab_clicked()
 {
-    //int idp=ui->lineEdit_11->text().toInt();
+
     bool test=ab.supprimer_ab(selected2);
     if(test)
     {

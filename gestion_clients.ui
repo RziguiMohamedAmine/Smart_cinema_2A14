@@ -37,7 +37,7 @@ background-color: rgb(197, 178, 236);
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <property name="tabsClosable">
     <bool>true</bool>
@@ -271,10 +271,10 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;
       <widget class="QTableView" name="tableView">
        <property name="geometry">
         <rect>
-         <x>60</x>
-         <y>20</y>
+         <x>30</x>
+         <y>30</y>
          <width>661</width>
-         <height>331</height>
+         <height>371</height>
         </rect>
        </property>
        <property name="styleSheet">
