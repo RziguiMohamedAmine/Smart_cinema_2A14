@@ -26,7 +26,6 @@ gestion_clients::gestion_clients(QWidget *parent) :
     ui->lineEdit_id->setValidator(new QIntValidator(0, 99999, this));
 
 
-
 }
 
 gestion_clients::~gestion_clients()
@@ -274,15 +273,15 @@ void gestion_clients::on_pushButton_modif_ab_clicked()
 
 void gestion_clients::affichertable_abonne()
 {
-        proxy_abonne = new QSortFilterProxyModel();
+        filtre_abonne = new QSortFilterProxyModel();
 
-        proxy_abonne->setSourceModel(aa.afficher());
+        filtre_abonne->setSourceModel(aa.afficher());
 
-        proxy_abonne->setFilterCaseSensitivity(Qt::CaseInsensitive);
+        filtre_abonne->setFilterCaseSensitivity(Qt::CaseInsensitive);
 
-        proxy_abonne->setFilterKeyColumn(-1);
+        filtre_abonne->setFilterKeyColumn(-1);
 
-        ui->tableView->setModel(proxy_abonne);
+        ui->tableView->setModel(filtre_abonne);
 
 
 }
@@ -292,15 +291,15 @@ void gestion_clients::affichertable_abonne()
 
 void gestion_clients::affichertable_abonnement()
 {
-    proxy_abonnement = new QSortFilterProxyModel();
+    filtre_abonnement = new QSortFilterProxyModel();
 
-    proxy_abonnement->setSourceModel(ab.afficher_ab());
+    filtre_abonnement->setSourceModel(ab.afficher_ab());
 
-    proxy_abonnement->setFilterCaseSensitivity(Qt::CaseInsensitive);
+    filtre_abonnement->setFilterCaseSensitivity(Qt::CaseInsensitive);
 
-    proxy_abonnement->setFilterKeyColumn(-1);
+    filtre_abonnement->setFilterKeyColumn(-1);
 
-    ui->tableView_2->setModel(proxy_abonnement);
+    ui->tableView_2->setModel(filtre_abonnement);
 
 }
 
@@ -329,12 +328,12 @@ void gestion_clients::on_tableView_2_clicked(const QModelIndex &index)
 
 void gestion_clients::on_lineEdit_textChanged(const QString &arg1)
 {
-    proxy_abonnement->setFilterFixedString(arg1);
+    filtre_abonnement->setFilterFixedString(arg1);
 }
 
 void gestion_clients::on_lineEdit_rech_textChanged(const QString &arg1)
 {
-    proxy_abonne->setFilterFixedString(arg1);
+    filtre_abonne->setFilterFixedString(arg1);
 }
 
 
@@ -353,12 +352,6 @@ void gestion_clients::on_pushButton_2_clicked()
     {
         return;
     }
-
-   /* QPrinter printer;
-    printer.setPrinterName("desired printer name");
-    QPrintDialog dialog(&printer,this);
-    if(dialog.exec()== QDialog::Rejected)
-        ui->textEdit->print(&printer);*/
 
 }
 

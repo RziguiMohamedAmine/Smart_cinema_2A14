@@ -10,6 +10,9 @@ Login::Login(QWidget *parent)
 
     ui->setupUi(this);
     c.createconnect();
+    bool test=c.createconnect();
+    if(test)
+        ui->label_log->setText("connected...");
     QPixmap pic("C:/Users/user/Desktop/login.png");
      ui->label_pic->setPixmap(pic.scaled(180,180,Qt::KeepAspectRatio));
 
@@ -76,13 +79,13 @@ void Login::on_pushButton_log_clicked()
              g.exec();
        }
 
-      /* if(count<1)
+       if(count<1)
        {
            ui->label_l->setText("username and password are incorrect");
            QPixmap pic("C:/Users/user/Desktop/fail.png");
              ui->label_pic->setPixmap(pic.scaled(140,140,Qt::KeepAspectRatio));
 
-       }*/
+       }
         c.closeconnect();
    }
 }

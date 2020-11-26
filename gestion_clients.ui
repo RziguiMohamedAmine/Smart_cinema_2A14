@@ -22,18 +22,19 @@
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>80</y>
+     <x>90</x>
+     <y>30</y>
      <width>1031</width>
      <height>601</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(197, 178, 236);</string>
+background-color: rgb(197, 178, 236);
+</string>
    </property>
    <property name="tabShape">
-    <enum>QTabWidget::Triangular</enum>
+    <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
     <number>1</number>
@@ -59,6 +60,7 @@ background-color: rgb(197, 178, 236);</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(197, 178, 236);
+background-color: rgb(197, 178, 236);
 font: 75 10pt &quot;MS Shell Dlg 2&quot;;
 </string>
      </property>
@@ -66,7 +68,7 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;
       <enum>QTabWidget::Triangular</enum>
      </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>1</number>
      </property>
      <property name="tabsClosable">
       <bool>true</bool>
@@ -81,9 +83,9 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;
       <widget class="QPushButton" name="pushButton_ajouter">
        <property name="geometry">
         <rect>
-         <x>430</x>
-         <y>60</y>
-         <width>101</width>
+         <x>560</x>
+         <y>250</y>
+         <width>111</width>
          <height>31</height>
         </rect>
        </property>
@@ -245,6 +247,22 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;
         </item>
        </layout>
       </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>520</x>
+         <y>40</y>
+         <width>301</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 22pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Ajouter Abonné</string>
+       </property>
+      </widget>
      </widget>
      <widget class="QWidget" name="tab_4">
       <attribute name="title">
@@ -296,6 +314,23 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;
        </property>
        <property name="placeholderText">
         <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>790</x>
+         <y>190</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Rechercher:</string>
        </property>
       </widget>
      </widget>
@@ -522,7 +557,7 @@ background-color: rgb(197, 178, 236);</string>
       <enum>QTabWidget::Triangular</enum>
      </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>1</number>
      </property>
      <property name="tabsClosable">
       <bool>true</bool>
@@ -537,10 +572,10 @@ background-color: rgb(197, 178, 236);</string>
       <widget class="QPushButton" name="pushButton_ajout_ab">
        <property name="geometry">
         <rect>
-         <x>430</x>
-         <y>80</y>
-         <width>93</width>
-         <height>28</height>
+         <x>560</x>
+         <y>250</y>
+         <width>111</width>
+         <height>31</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -701,6 +736,22 @@ background-color: rgb(197, 178, 236);</string>
         </item>
        </layout>
       </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>50</y>
+         <width>351</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 22pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Ajouter Abonnement</string>
+       </property>
+      </widget>
      </widget>
      <widget class="QWidget" name="tab_8">
       <attribute name="title">
@@ -749,6 +800,22 @@ background-color: rgb(197, 178, 236);</string>
          <width>113</width>
          <height>22</height>
         </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>790</x>
+         <y>220</y>
+         <width>111</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Rechercher:</string>
        </property>
       </widget>
      </widget>
@@ -961,7 +1028,7 @@ background-color: rgb(197, 178, 236);</string>
         <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>40</x>

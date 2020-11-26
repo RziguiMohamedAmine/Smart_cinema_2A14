@@ -23,7 +23,7 @@ public:
     explicit gestion_clients(QWidget *parent = nullptr);
     QString selected;
     QString selected2;
-    QSortFilterProxyModel *proxy_abonne,*proxy_abonnement;
+    QSortFilterProxyModel *filtre_abonne,*filtre_abonnement;
     void affichertable_abonne();
     void affichertable_abonnement();
     ~gestion_clients();
