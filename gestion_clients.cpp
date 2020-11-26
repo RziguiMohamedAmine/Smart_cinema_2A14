@@ -341,9 +341,11 @@ void gestion_clients::on_lineEdit_rech_textChanged(const QString &arg1)
 
 
 
+
 void gestion_clients::on_pushButton_2_clicked()
 {
     QPrinter printer;
+
     QPrintDialog dialog(&printer,this);
     dialog.setWindowTitle("imprimer abonnement");
     if(ui->textEdit->textCursor().hasSelection())
