@@ -7,6 +7,8 @@
 #include<QFileInfo>
 #include"gestion_clients.h"
 #include<QPropertyAnimation>
+#include<QSound>
+#include<QMediaPlayer>
 
 
 
@@ -21,6 +23,7 @@ class Login : public QMainWindow
 
 public:
     Login(QWidget *parent = nullptr);
+    QSound *s = new QSound(":C:/Users/user/Desktop/1.mp3");
      connexion c;
     ~Login();
 

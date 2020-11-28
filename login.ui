@@ -22,8 +22,8 @@
      <rect>
       <x>80</x>
       <y>90</y>
-      <width>681</width>
-      <height>401</height>
+      <width>821</width>
+      <height>391</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -53,8 +53,8 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;
     <widget class="QLabel" name="label_pic">
      <property name="geometry">
       <rect>
-       <x>460</x>
-       <y>60</y>
+       <x>580</x>
+       <y>50</y>
        <width>171</width>
        <height>141</height>
       </rect>

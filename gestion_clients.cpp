@@ -7,13 +7,17 @@
 #include <QMessageBox>
 #include <QIntValidator>
 #include <QPixmap>
-
+#include <QFileDialog>
 
 gestion_clients::gestion_clients(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::gestion_clients)
 {
     ui->setupUi(this);
+    //s=new QSound(":/sound/1.mp3");
+    //s->play();
+
+
     affichertable_abonnement();
     //ui->tableView->setModel(aa.afficher());
     ui->comboBox_4->setModel(aa.afficher());
@@ -56,6 +60,7 @@ void gestion_clients::on_pushButton_ajouter_clicked()
   QString prenom = ui->lineEdit_prenom->text();
   QString code = ui->lineEdit_code->text();
   QString mail = ui->lineEdit_mail->text();
+  //QString texte=ui->lineEdit_4->text();
 
   abonne e(code,nom,prenom,mail,telephone);
   bool test=e.ajouter();
@@ -359,6 +364,33 @@ void gestion_clients::on_pushButton_2_clicked()
 
 
 
+
+
+
+
+
+void gestion_clients::on_pushButton_3_clicked()
+{
+
+    QString mail=ui->lineEdit_3->text();
+    QString text = this->ui->textEdit_2->toPlainText();
+    abonne e(mail,text);
+
+    bool test=e.envoyer_mail();
+    if(test)
+    {
+       // ui->tableView->setModel(aa.afficher());
+        affichertable_abonne();
+        ui->comboBox_4->setModel(aa.afficher());
+
+        QMessageBox::information(nullptr,QObject::tr("envoyer un mail"),
+                                 QObject::tr("mail envoyé !!\n""Click Cancel to exit."),QMessageBox::Cancel);
+    }
+    else
+        QMessageBox::critical(nullptr,QObject::tr("envoyer un mail"),
+                                 QObject::tr("Erreur !!\n""Click Cancel to exit."),QMessageBox::Cancel);
+
+}
 
 
 

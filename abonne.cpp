@@ -12,6 +12,13 @@ abonne::abonne()
 
 }
 
+abonne::abonne(QString b,QString c)
+{
+    this->email=b;
+    this->texte_mail=c;
+}
+
+
 abonne::abonne(QString c,QString n,QString p,QString m,long t)
 {
     this->code=c;
@@ -20,6 +27,8 @@ abonne::abonne(QString c,QString n,QString p,QString m,long t)
     this->email=m;
     this->telephone=t;
 }
+
+
 
 
 
@@ -54,6 +63,11 @@ void abonne::set_telephone(long t)
     telephone=t;
 }
 
+void abonne::set_textemail(QString m)
+{
+    texte_mail=m;
+}
+
 
 QString abonne::get_code()
 {
@@ -80,6 +94,11 @@ long abonne::get_telephone()
     return telephone;
 }
 
+
+QString abonne::get_textemail()
+{
+    return texte_mail;
+}
 
 
 bool abonne::ajouter()
@@ -143,6 +162,15 @@ bool abonne::supprimer(QString sel)
 }
 
 
+bool abonne::envoyer_mail()
+{
+    QSqlQuery query ;
+    query.prepare("UPDATE abonne set texte_mail = :texte_mail where mail =:mail ") ;
+    query.bindValue(":mail",email);
+    query.bindValue(":texte_mail",texte_mail);
+    return query.exec();
+
+}
 
 
 

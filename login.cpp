@@ -2,7 +2,6 @@
 #include "ui_login.h"
 #include "connexion.h"
 #include <QPixmap>
-
 Login::Login(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Login)
@@ -72,7 +71,7 @@ void Login::on_pushButton_log_clicked()
 
            // QThread::msleep(1000) ;
 
-
+            s->play();
              this->hide();
              gestion_clients g;
              g.setModal(true);

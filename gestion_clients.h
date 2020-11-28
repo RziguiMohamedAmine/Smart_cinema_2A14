@@ -9,6 +9,8 @@
 #include<QStandardItemModel>
 #include<QPrinter>
 #include<QPrintDialog>
+#include<QSound>
+#include<QMediaPlayer>
 
 
 namespace Ui {
@@ -65,10 +67,13 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_pushButton_3_clicked();
+
 private:
     Ui::gestion_clients *ui;
     abonne aa;
     abonnement ab;
+    QSound *s;
 };
 
 #endif // GESTION_CLIENTS_H
