@@ -14,7 +14,16 @@ gestion_clients::gestion_clients(QWidget *parent) :
     ui(new Ui::gestion_clients)
 {
     ui->setupUi(this);
-    //s=new QSound(":/sound/1.mp3");
+    connexion c;
+    bool test=c.createconnect();
+    if(test)
+    {
+        ui->label_gcon->setText("connected...");
+    }
+
+
+
+   // s=new QSound(":/sound/1.mp3");
     //s->play();
 
 
@@ -349,16 +358,70 @@ void gestion_clients::on_lineEdit_rech_textChanged(const QString &arg1)
 
 void gestion_clients::on_pushButton_2_clicked()
 {
-    QPrinter printer;
+    /*QPrinter printer2;
 
-    QPrintDialog dialog(&printer,this);
+    QPrintDialog dialog(&printer2,this);
     dialog.setWindowTitle("imprimer abonnement");
     if(ui->textEdit->textCursor().hasSelection())
     dialog.addEnabledOption(QAbstractPrintDialog::PrintSelection);
     if(dialog.exec() != QDialog::Accepted)
     {
         return;
-    }
+    }*/
+
+    QString strStream;
+                     QTextStream out(&strStream);
+
+                     const int rowCount = ui->tableView_2->model()->rowCount();
+                     const int columnCount = ui->tableView_2->model()->columnCount();
+
+                     out <<  "<html>\n"
+                         "<head>\n"
+                         "<meta Content=\"Text/html; charset=Windows-1251\">\n"
+                         <<  QString("<title>%1</title>\n").arg("strTitle")
+                         <<  "</head>\n"
+                         "<body bgcolor=#e7ff3c link=#5000A0>\n"
+
+                        //     "<align='right'> " << datefich << "</align>"
+                         "<center> <H1>Liste des abonnements </H1></br></br><table border=1 cellspacing=0 cellpadding=5>\n";
+
+                     // headers
+                     out << "<thead><tr bgcolor=#c5b2ec> <th>Numero</th>";
+                     for (int column = 0; column < columnCount; column++)
+                         if (!ui->tableView_2->isColumnHidden(column))
+                             out << QString("<th>%1</th>").arg(ui->tableView_2->model()->headerData(column, Qt::Horizontal).toString());
+                     out << "</tr></thead>\n";
+
+                     // data table
+                     for (int row = 0; row < rowCount; row++) {
+                         out << "<tr> <td bkcolor=0>" << row+1 <<"</td>";
+                         for (int column = 0; column < columnCount; column++) {
+                             if (!ui->tableView_2->isColumnHidden(column)) {
+                   QString data = ui->tableView_2->model()->data(ui->tableView_2->model()->index(row, column)).toString().simplified();
+                                 out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
+                             }
+                         }
+                         out << "</tr>\n";
+                     }
+                     out <<  "</table> </center>\n"
+                         "</body>\n"
+                         "</html>\n";
+
+               QString fileName = QFileDialog::getSaveFileName((QWidget* )0, "Sauvegarder en PDF", QString(), "*.pdf");
+                 if (QFileInfo(fileName).suffix().isEmpty())
+                 { fileName.append(".pdf");
+
+                 }
+
+                QPrinter printer (QPrinter::PrinterResolution);
+                 printer.setOutputFormat(QPrinter::PdfFormat);
+                printer.setPaperSize(QPrinter::A4);
+               printer.setOutputFileName(fileName);
+
+                QTextDocument doc;
+                 doc.setHtml(strStream);
+                 doc.setPageSize(printer.pageRect().size()); // This is necessary if you want to hide the page number
+                 doc.print(&printer);
 
 }
 

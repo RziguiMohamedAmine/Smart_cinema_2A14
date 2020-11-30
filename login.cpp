@@ -2,6 +2,7 @@
 #include "ui_login.h"
 #include "connexion.h"
 #include <QPixmap>
+
 Login::Login(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Login)
@@ -71,21 +72,28 @@ void Login::on_pushButton_log_clicked()
 
            // QThread::msleep(1000) ;
 
-            s->play();
+              //s->play();
              this->hide();
              gestion_clients g;
              g.setModal(true);
              g.exec();
+
+               /* QSoundEffect effect;
+                 effect.setSource(QUrl::fromLocalFile("1.mp3"));
+                 effect.setLoopCount(QSoundEffect::Infinite);
+                 effect.setVolume(50);
+                 effect.play();*/
+
        }
 
-       if(count<1)
+      else if(count<1)
        {
            ui->label_l->setText("username and password are incorrect");
            QPixmap pic("C:/Users/user/Desktop/fail.png");
              ui->label_pic->setPixmap(pic.scaled(140,140,Qt::KeepAspectRatio));
 
        }
-        c.closeconnect();
+        //c.closeconnect();
    }
 }
 

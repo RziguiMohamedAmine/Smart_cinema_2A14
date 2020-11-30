@@ -37,7 +37,7 @@ background-color: rgb(197, 178, 236);
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <property name="tabsClosable">
     <bool>true</bool>
@@ -68,7 +68,7 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;
       <enum>QTabWidget::Triangular</enum>
      </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>2</number>
      </property>
      <property name="tabsClosable">
       <bool>true</bool>
@@ -91,6 +91,8 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;
        </property>
        <property name="styleSheet">
         <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 127);
+
 
 </string>
        </property>
@@ -296,7 +298,8 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 127);</string>
        </property>
        <property name="text">
         <string>Supprimer</string>
@@ -350,7 +353,8 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 127);</string>
        </property>
        <property name="text">
         <string>Modifier</string>
@@ -541,15 +545,18 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
          <x>740</x>
          <y>310</y>
          <width>111</width>
-         <height>41</height>
+         <height>31</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+        <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
 background-color: rgb(255, 255, 127);</string>
        </property>
        <property name="text">
         <string>envoyer</string>
+       </property>
+       <property name="default">
+        <bool>true</bool>
        </property>
       </widget>
       <widget class="QTextEdit" name="textEdit_2">
@@ -565,7 +572,7 @@ background-color: rgb(255, 255, 127);</string>
         <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>50</x>
@@ -630,7 +637,7 @@ background-color: rgb(197, 178, 236);</string>
       <enum>QTabWidget::Triangular</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <property name="tabsClosable">
       <bool>true</bool>
@@ -652,7 +659,8 @@ background-color: rgb(197, 178, 236);</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 127);</string>
        </property>
        <property name="text">
         <string>Ajouter</string>
@@ -851,12 +859,13 @@ background-color: rgb(197, 178, 236);</string>
         <rect>
          <x>780</x>
          <y>80</y>
-         <width>93</width>
-         <height>28</height>
+         <width>111</width>
+         <height>31</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 127);</string>
        </property>
        <property name="text">
         <string>Supprimer</string>
@@ -891,6 +900,28 @@ background-color: rgb(197, 178, 236);</string>
         <string>Rechercher:</string>
        </property>
       </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>140</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 127);
+image: url(:/sound/1.mp3);
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+</string>
+       </property>
+       <property name="text">
+        <string>imprimer</string>
+       </property>
+       <property name="default">
+        <bool>true</bool>
+       </property>
+      </widget>
      </widget>
      <widget class="QWidget" name="tab_11">
       <attribute name="title">
@@ -906,7 +937,8 @@ background-color: rgb(197, 178, 236);</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 127);</string>
        </property>
        <property name="text">
         <string>Modifier</string>
@@ -1067,59 +1099,6 @@ background-color: rgb(197, 178, 236);</string>
            <string notr="true">background-color: rgb(255, 255, 255);</string>
           </property>
          </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="tab_9">
-      <attribute name="title">
-       <string>imprimer_abonnement</string>
-      </attribute>
-      <widget class="QPushButton" name="pushButton_2">
-       <property name="geometry">
-        <rect>
-         <x>740</x>
-         <y>150</y>
-         <width>93</width>
-         <height>28</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>imprimer</string>
-       </property>
-      </widget>
-      <widget class="QTextEdit" name="textEdit">
-       <property name="geometry">
-        <rect>
-         <x>50</x>
-         <y>110</y>
-         <width>541</width>
-         <height>291</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);</string>
-       </property>
-      </widget>
-      <widget class="QWidget" name="layoutWidget">
-       <property name="geometry">
-        <rect>
-         <x>40</x>
-         <y>40</y>
-         <width>324</width>
-         <height>29</height>
-        </rect>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_11">
-        <item>
-         <widget class="QLabel" name="label">
-          <property name="text">
-           <string>donner l'identifiant:</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit_2"/>
         </item>
        </layout>
       </widget>

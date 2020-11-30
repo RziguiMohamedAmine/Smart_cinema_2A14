@@ -9,6 +9,8 @@
 #include<QPropertyAnimation>
 #include<QSound>
 #include<QMediaPlayer>
+#include<QSoundEffect>
+#include<QUrl>
 
 
 

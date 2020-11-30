@@ -11,6 +11,7 @@
 #include<QPrintDialog>
 #include<QSound>
 #include<QMediaPlayer>
+#include <QSoundEffect>
 
 
 namespace Ui {
