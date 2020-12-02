@@ -12,6 +12,7 @@
 #include<QSound>
 #include<QMediaPlayer>
 #include <QSoundEffect>
+#include<QPropertyAnimation>
 
 
 namespace Ui {

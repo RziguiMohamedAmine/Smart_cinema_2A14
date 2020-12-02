@@ -79,7 +79,7 @@ void Login::on_pushButton_log_clicked()
              g.exec();
 
                /* QSoundEffect effect;
-                 effect.setSource(QUrl::fromLocalFile("1.mp3"));
+                 effect.setSource(QUrl::fromLocalFile("1.wav"));
                  effect.setLoopCount(QSoundEffect::Infinite);
                  effect.setVolume(50);
                  effect.play();*/

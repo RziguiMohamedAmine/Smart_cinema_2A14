@@ -23,8 +23,9 @@ gestion_clients::gestion_clients(QWidget *parent) :
 
 
 
-   // s=new QSound(":/sound/1.mp3");
-    //s->play();
+
+    //s=new QSound(":/sound/sonn1.wav");
+   // s->play();
 
 
     affichertable_abonnement();
@@ -358,16 +359,6 @@ void gestion_clients::on_lineEdit_rech_textChanged(const QString &arg1)
 
 void gestion_clients::on_pushButton_2_clicked()
 {
-    /*QPrinter printer2;
-
-    QPrintDialog dialog(&printer2,this);
-    dialog.setWindowTitle("imprimer abonnement");
-    if(ui->textEdit->textCursor().hasSelection())
-    dialog.addEnabledOption(QAbstractPrintDialog::PrintSelection);
-    if(dialog.exec() != QDialog::Accepted)
-    {
-        return;
-    }*/
 
     QString strStream;
                      QTextStream out(&strStream);
@@ -409,8 +400,8 @@ void gestion_clients::on_pushButton_2_clicked()
 
                QString fileName = QFileDialog::getSaveFileName((QWidget* )0, "Sauvegarder en PDF", QString(), "*.pdf");
                  if (QFileInfo(fileName).suffix().isEmpty())
-                 { fileName.append(".pdf");
-
+                 {
+                     fileName.append(".pdf");
                  }
 
                 QPrinter printer (QPrinter::PrinterResolution);
@@ -420,7 +411,7 @@ void gestion_clients::on_pushButton_2_clicked()
 
                 QTextDocument doc;
                  doc.setHtml(strStream);
-                 doc.setPageSize(printer.pageRect().size()); // This is necessary if you want to hide the page number
+                 doc.setPageSize(printer.pageRect().size());
                  doc.print(&printer);
 
 }
