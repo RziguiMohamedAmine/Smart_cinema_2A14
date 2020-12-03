@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>ressource/+.png</file>
+        <file>ressource/SUPP.png</file>
+        <file>ressource/VALID.png</file>
+        <file>ressource/ZIGZAG.jpg</file>
+    </qresource>
+</RCC>

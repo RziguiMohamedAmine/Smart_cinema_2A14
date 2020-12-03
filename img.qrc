@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/l">
+        <file>ressource/+.png</file>
+        <file>ressource/employe.jpg</file>
+        <file>ressource/modi.jfif</file>
+        <file>ressource/recherche.jpg</file>
+        <file>ressource/SUPP.png</file>
+        <file>ressource/tri.jpg</file>
+        <file>ressource/VALID.png</file>
+        <file>ressource/ZIGZAG.jpg</file>
+    </qresource>
+</RCC>

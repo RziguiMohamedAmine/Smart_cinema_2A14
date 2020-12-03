@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>ressource/+.png</file>
+        <file>ressource/employe.jpg</file>
+        <file>ressource/imprimante.png</file>
+        <file>ressource/modi.jfif</file>
+        <file>ressource/recherche.jpg</file>
+        <file>ressource/SUPP.png</file>
+        <file>ressource/tri.jpg</file>
+        <file>ressource/user.png</file>
+        <file>ressource/VALID.png</file>
+        <file>ressource/ZIGZAG.jpg</file>
+    </qresource>
+</RCC>
