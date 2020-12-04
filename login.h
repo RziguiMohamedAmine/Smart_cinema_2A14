@@ -25,7 +25,7 @@ class Login : public QMainWindow
 
 public:
     Login(QWidget *parent = nullptr);
-    QSound *s = new QSound(":C:/Users/user/Desktop/1.mp3");
+    //QSound *s = new QSound(":C:/Users/user/Desktop/1.wav");
      connexion c;
     ~Login();
 

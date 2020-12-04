@@ -10,6 +10,7 @@ Login::Login(QWidget *parent)
 
     ui->setupUi(this);
     c.createconnect();
+    //s->play();
     bool test=c.createconnect();
     if(test)
         ui->label_log->setText("connected...");
@@ -59,12 +60,12 @@ void Login::on_pushButton_log_clicked()
 
    if(query.exec())
    {
-       int count=0;
+       int i=0;
        while(query.next())
        {
-           count++;
+           i++;
        }
-       if(count==1)
+       if(i==1)
        {
            ui->label_l->setText("username and password are correct");
            QPixmap pic("C:/Users/user/Desktop/log1.png");
@@ -72,7 +73,7 @@ void Login::on_pushButton_log_clicked()
 
            // QThread::msleep(1000) ;
 
-              //s->play();
+
              this->hide();
              gestion_clients g;
              g.setModal(true);
@@ -86,7 +87,7 @@ void Login::on_pushButton_log_clicked()
 
        }
 
-      else if(count<1)
+      else if(i<1)
        {
            ui->label_l->setText("username and password are incorrect");
            QPixmap pic("C:/Users/user/Desktop/fail.png");

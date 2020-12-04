@@ -37,7 +37,7 @@ background-color: rgb(197, 178, 236);
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <property name="tabsClosable">
     <bool>true</bool>
@@ -68,7 +68,7 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;
       <enum>QTabWidget::Triangular</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <property name="tabsClosable">
       <bool>true</bool>
@@ -91,7 +91,8 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;
        </property>
        <property name="styleSheet">
         <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 255, 127);
+background-color: rgb(206, 178, 16);
+
 
 
 </string>
@@ -282,7 +283,8 @@ background-color: rgb(255, 255, 127);
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);</string>
+        <string notr="true">background-color: rgb(255, 255, 255);
+</string>
        </property>
        <property name="sortingEnabled">
         <bool>true</bool>
@@ -299,7 +301,7 @@ background-color: rgb(255, 255, 127);
        </property>
        <property name="styleSheet">
         <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 255, 127);</string>
+background-color: rgb(206, 178, 16);</string>
        </property>
        <property name="text">
         <string>Supprimer</string>
@@ -354,7 +356,7 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 255, 127);</string>
+background-color: rgb(206, 178, 16);</string>
        </property>
        <property name="text">
         <string>Modifier</string>
@@ -550,7 +552,7 @@ background-color: rgb(255, 255, 127);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 255, 127);</string>
+background-color: rgb(206, 178, 16);</string>
        </property>
        <property name="text">
         <string>envoyer</string>
@@ -597,6 +599,19 @@ background-color: rgb(255, 255, 127);</string>
         </item>
        </layout>
       </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>60</y>
+         <width>171</width>
+         <height>161</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QLabel" name="label_gcon">
@@ -625,7 +640,7 @@ background-color: rgb(255, 255, 127);</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>1021</width>
+       <width>1031</width>
        <height>521</height>
       </rect>
      </property>
@@ -637,7 +652,7 @@ background-color: rgb(197, 178, 236);</string>
       <enum>QTabWidget::Triangular</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <property name="tabsClosable">
       <bool>true</bool>
@@ -660,7 +675,7 @@ background-color: rgb(197, 178, 236);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 255, 127);</string>
+background-color: rgb(206, 178, 16);</string>
        </property>
        <property name="text">
         <string>Ajouter</string>
@@ -865,7 +880,7 @@ background-color: rgb(255, 255, 127);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 255, 127);</string>
+background-color: rgb(206, 178, 16);</string>
        </property>
        <property name="text">
         <string>Supprimer</string>
@@ -910,8 +925,7 @@ background-color: rgb(255, 255, 127);</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 127);
-image: url(:/sound/1.mp3);
+        <string notr="true">background-color: rgb(206, 178, 16);
 font: 75 12pt &quot;MS Shell Dlg 2&quot;;
 </string>
        </property>
@@ -938,7 +952,7 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;
        </property>
        <property name="styleSheet">
         <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 255, 127);</string>
+background-color: rgb(206, 178, 16);</string>
        </property>
        <property name="text">
         <string>Modifier</string>

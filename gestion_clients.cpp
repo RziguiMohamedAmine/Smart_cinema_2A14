@@ -8,6 +8,7 @@
 #include <QIntValidator>
 #include <QPixmap>
 #include <QFileDialog>
+#include <QPixmap>
 
 gestion_clients::gestion_clients(QWidget *parent) :
     QDialog(parent),
@@ -22,7 +23,8 @@ gestion_clients::gestion_clients(QWidget *parent) :
     }
 
 
-
+    QPixmap pic("C:/Users/user/Desktop/mail.png");
+     ui->label->setPixmap(pic.scaled(150,200,Qt::KeepAspectRatio));
 
     //s=new QSound(":/sound/sonn1.wav");
    // s->play();
@@ -376,14 +378,14 @@ void gestion_clients::on_pushButton_2_clicked()
                         //     "<align='right'> " << datefich << "</align>"
                          "<center> <H1>Liste des abonnements </H1></br></br><table border=1 cellspacing=0 cellpadding=5>\n";
 
-                     // headers
+
                      out << "<thead><tr bgcolor=#c5b2ec> <th>Numero</th>";
                      for (int column = 0; column < columnCount; column++)
                          if (!ui->tableView_2->isColumnHidden(column))
                              out << QString("<th>%1</th>").arg(ui->tableView_2->model()->headerData(column, Qt::Horizontal).toString());
                      out << "</tr></thead>\n";
 
-                     // data table
+
                      for (int row = 0; row < rowCount; row++) {
                          out << "<tr> <td bkcolor=0>" << row+1 <<"</td>";
                          for (int column = 0; column < columnCount; column++) {
@@ -398,7 +400,7 @@ void gestion_clients::on_pushButton_2_clicked()
                          "</body>\n"
                          "</html>\n";
 
-               QString fileName = QFileDialog::getSaveFileName((QWidget* )0, "Sauvegarder en PDF", QString(), "*.pdf");
+               QString fileName = QFileDialog::getSaveFileName((QWidget* )0, "enregistrer en PDF", QString(), "*.pdf");
                  if (QFileInfo(fileName).suffix().isEmpty())
                  {
                      fileName.append(".pdf");
