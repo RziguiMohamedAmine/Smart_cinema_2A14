@@ -16,20 +16,27 @@ SOURCES += \
     abonne.cpp \
     abonnement.cpp \
     connection.cpp \
+    departement1.cpp \
+    employe1.cpp \
     gestion_clients.cpp \
     main.cpp \
-    menu.cpp
+    menu.cpp \
+    ressource_humaine.cpp
 
 HEADERS += \
     abonne.h \
     abonnement.h \
     connection.h \
+    departement1.h \
+    employe1.h \
     gestion_clients.h \
-    menu.h
+    menu.h \
+    ressource_humaine.h
 
 FORMS += \
     gestion_clients.ui \
-    menu.ui
+    menu.ui \
+    ressource_humaine.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
