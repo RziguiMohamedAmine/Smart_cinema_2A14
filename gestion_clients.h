@@ -38,7 +38,7 @@ private slots:
 
     void on_pushButton_ajouter_clicked();
 
-
+    void showtime();
 
 
     void on_comboBox_4_currentIndexChanged();

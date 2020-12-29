@@ -9,6 +9,9 @@
 #include <QPixmap>
 #include <QFileDialog>
 #include <QPixmap>
+#include <QTime>
+#include <QDate>
+#include <QDateTime>
 
 gestion_clients::gestion_clients(QWidget *parent) :
     QDialog(parent),
@@ -41,6 +44,14 @@ gestion_clients::gestion_clients(QWidget *parent) :
     ui->lineEdit_telephone->setValidator(new QIntValidator(0, 9999999, this));
     ui->lineEdit_id->setValidator(new QIntValidator(0, 99999, this));
 
+
+    QTimer *timer=new QTimer(this);
+    connect(timer,SIGNAL(timeout()),this,SLOT(showtime()));
+    timer->start();
+
+    QDate date=QDate::currentDate();
+    QString datetext=date.toString();
+    ui->date->setText(datetext);
 
 }
 
@@ -450,7 +461,12 @@ void gestion_clients::on_pushButton_3_clicked()
 
 
 
-
+void gestion_clients::showtime()
+{
+    QTime time=QTime::currentTime();
+    QString time_text=time.toString("hh:mm:ss");
+    ui->label_9->setText(time_text);
+}
 
 
 
