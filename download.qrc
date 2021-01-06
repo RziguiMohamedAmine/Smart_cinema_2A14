@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>Gradient De Bouton De Médias Sociaux, Icônes De Médias Sociaux, Des Médias Sociaux, Jeu D'icônes De Médias Sociaux Fichier PNG et PSD pour le téléchargement libre.jfif</file>
+        <file>download.jfif</file>
+        <file>SaveFrom_Net.jfif</file>
+        <file>Add-icon.png</file>
+        <file>delete-icon.png</file>
+        <file>Marcus-Roberto-Google-Play-Gmail.ico</file>
+    </qresource>
+    <qresource prefix="/new/prefix2">
+        <file>Free Movie Nights - Around FoCo - Fort Collins Free Movies.png</file>
+    </qresource>
+</RCC>
